@@ -1,196 +1,251 @@
 *{
-    font-weight: 600;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-:root{
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-}
-
-body {
-    background-color: #121214;
-    font-family: 'Inter', sans-serif;
-    display: grid;
-    place-content: center;
-    height: 100vh;
-}
-
-.flex{
+body{
+    
     display: flex;
-}
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;    /*overflow: hidden;
+    position: fixed;
+    min-width: 300px;
+    max-height: 100vh;*/
+    min-height: 100vh;
 
-.card{
-    background-color: white;
-    flex-direction: column;
-    padding: 24px 56px;
-    border-radius: 10%;
-    gap: 96px;
-    max-width: 795px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    background: linear-gradient(102.32deg, #030422 -2.74%, #090114 101.6%);
    
-    
 }
 
-.card-drag{
-    background: #E5D8EA;
-    width: 168px;
-    height: 18px;
-    border-radius: 999px;
-    margin-inline: auto;
-}
+.middle{
+    max-height: 608px;
+    min-height: 608px;
 
-.card-body{
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.card-header p {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    color: #37203B;
-}
-
-.card-header h1{
-    font-size: 40px;
-    line-height: 48px;
-    color: #372D3B;
-}
-
-.card-header h1 span{
-    color: #846293
-}
-
-.left{
-    flex-direction: row;
-}
-
-.card-body .left{
-    align-items: center;
-}
-.driver{
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-right: -46px;
+    min-width: 436px;
+    max-width: 436px;
     z-index: 1;
-}
+    border-radius: 35px;
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    position: relative; /* Add relative positioning */
 
-.driver-avatar img{
-    border-radius: 70%;
-    width: 138px;
-    height: 138px;
-    object-fit: cover;
-}
-
-.driver-stars{
-    color: #FBF8FC;
-    background-color: #372D3B;
-    border-radius: 999px;
-    padding: 8px 22px;
-    height: 32px;
-    width: 100px;
-
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 600;
-
-    gap: 10px;
-
-    align-items: center;
-    justify-content: center;
-
-    margin-top: -32px;
-        
-}
-
-.driver-name{
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-
-    color: #372D3B;
-
-    margin-top: 6px;
-}
-
-
-.car-img{
-    margin-left: -6px;
+    background-image: url(yurr.png);
+    background-position: 50% 50%; 
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
-.right{
-    align-self: right;
-    
-    
-}
-.car-plate{
-    font-size: 35px;
-    font-weight: 700;
-    color: #372D3B;
-}
-.car-model{
-    font-size: 20px;
-    font-weight: 350;
-    line-height: 30px;
-}
-.card-footer{
-    flex-direction: row;
-    align-items: center;
-    gap: 32px;
-}
+  
+.middle::before {
+    content: ""; /* Add content for pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    top: 0;
+    left: 0;
 
-.input-wrapper{
-    border-radius: 24px;
-    background-color: #F5EDF7;
-    flex: 3;
-    height: 64px;
-    max-width: 300px
-    align-items: center;  
-    padding: 0px 32px;  
-}
-
-
-.input-wrapper label{
-    position: absolute;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 0;
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    border-width: 0;
-    clip: rect(0,0,0,0);
-}
-
-.input-wrapper input{
+    border-radius: 35px;
     width: 100%;
-    max-height: 24px;
-    background-color: transparent;
-    border: 0;
-    flex-direction: row;
-    align-self: center;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 28px;
+    height: 100%;
+    background: linear-gradient(90.24deg, rgba(13, 21, 92, 0.878) 0%, rgba(53, 14, 88, 0.859) 98.1%);
+    opacity: 0.6; /* Adjust the opacity as desired */
+    /*z-index: -1; /* Place the pseudo-element behind the content */
+}
+                                                                                                                                    
+.middle::after {
+    content: ""; /* Add content for pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    top: 0;
+    left: 0;
+  
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90.24deg, rgba(14, 23, 101, 0.947) 0%, rgba(53, 14, 88, 0.928) 98.1%);
+    opacity: 0.9; /* Adjust the opacity as desired */
+    z-index: -1;
 }
 
-.input-wrapper input:focus{
-    outline:0;
-    max-height: 10px;
+.writtenTings{
+    padding-top: 32px;
+    padding-left: 35px;
+    max-height: 56vh;
+    height: 196px;
+    z-index: 2;
+}
+
+.titleText{
+    color: white;
+    justify-content: left;
+    min-width: 263px;
 
 }
 
-.input-wrapper:focus-within{
-    outline: 90px  black;
+.titleText h1{
+    font-weight: 700;
+    line-height: 40px;                 
+    letter-spacing:  3px;
+    margin-bottom: 5px;
+    margin-top: 17px;
+    font-size: 32px;
+    min-width: 275px;
 }
 
-.card-footer .ph-fill{
-    font-size: 56px;
+.titleText p{
+    min-width: 300px;
+    margin-top: 16px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
 }
+
+
+.bodyText{
+    padding-top: 22px;
+    margin-top: 40px;
+    background-color: #0d0f4d00;
+    max-width: 260px;
+}
+
+.qween{
+    width: 500px; /* Set the desired width */
+    height: auto; /* Set the desired height */
+    z-index: 3;
+    margin-bottom: -500px;
+    margin-left: -25px;
+    
+}
+
+.qween img{
+    margin-left: -200px;
+    margin-top: 50px;
+
+}
+
+.whiteFont{
+    width: 198px;
+    color: #D8CEDE;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    
+}
+
+.greyFont{
+    color: #9C83A7;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.lefty{
+    background-image: url(f.png);
+    max-height: 486px;
+    min-height: 486px;
+
+    min-width: 348px;
+    max-width: 348px;
+    z-index: 0;
+    margin-left: 100px;
+    margin-right: -116px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    
+  
+    flex: 1;
+    position: relative; /* Add relative positioning */
+    background-position: 50% 50%; 
+
+}
+
+                                                                                                                                  
+.lefty::after{
+    content: ""; /* Add content for pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 1, 14, 0.5), rgba(0, 1, 14, 0.5)), linear-gradient(148.95deg, rgba(14, 23, 101, 0.85) -7.05%, rgba(42, 17, 92, 0.85) 110.07%);
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
+
+.sub{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.08em;
+
+    opacity: 0.9;
+    /*border: 1px solid #312D74;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+
+    color: transparent; /* Set text fill color to transparent */
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.25); /* Add purple outline */
+    -webkit-text-fill-color: transparent;
+}
+
+.righty{
+    background-image: url(allah.png);
+    max-height: 486px;
+    min-height: 486px;
+
+    min-width: 348px;
+    max-width: 348px;
+    z-index: 0;
+    margin-right: 100px;
+    margin-left: -116px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    flex: 1;
+    position: relative; /* Add relative positioning */
+    background-position: 50% 50%; 
+
+}
+
+.righty::after{
+    content: ""; /* Add content for pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 1, 14, 0.5), rgba(0, 1, 14, 0.5)), linear-gradient(148.95deg, rgba(14, 23, 101, 0.85) -7.05%, rgba(42, 17, 92, 0.85) 110.07%);
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
