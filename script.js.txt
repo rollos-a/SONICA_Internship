@@ -1,0 +1,74 @@
+let hrz = document.getElementById("hoursNum");
+let minz = document.getElementById("minsNum");
+let secz = document.getElementById("secsNum");
+let ampm = document.getElementById("ampm")
+let header = document.getElementById("header")
+
+function timebb() {
+    var currentDate = new Date();
+
+    let h = currentDate.getHours();
+    let m = currentDate.getMinutes();
+    let s = currentDate.getSeconds();
+
+
+    if (h >= 12){
+        ampm.innerText = "pm";
+    }
+    else {
+        ampm.innerText = "am";
+    }
+
+    //hours
+    if (h>12){
+        h = h-12;
+    }else{
+        hrz.innerText = h;
+    }
+    if (h < 10){
+        h = "0" + h;
+        //if (h==0){
+         //   h = "12";
+        //}
+    }
+    hrz.innerText = h;
+
+    //minutes
+    if (m < 10){
+        minz.innerText = "0" + m;
+        if (m==0){
+            minz.innerText = "00";
+        }
+    }else{
+        minz.innerText = m;
+    }
+
+    //seconds 
+    if (s < 10){
+        secz.innerText = "0" + s;
+        if (s==0){
+            secz.innerText = "00";
+        }
+    }else{
+        secz.innerText = s;
+    }
+
+    //fun tings
+    if (h == 12 && m == 00){
+        header.innerText = "happy mid-day :)"
+    }
+
+    //runtime debugging tings
+    if(h=="1"){
+        header.innerText = "yurrheard";
+    }
+
+    /*
+    setTimeout(()=>{
+        timebb()
+    }, 1000)
+    */
+    setTimeout(timebb, 1000);
+}
+
+timebb()
